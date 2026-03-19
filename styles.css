@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-text: #567568;
+    --bg-color: #D5DFE5;
+    --white: #FFFFFF;
+    --light-green: #7F9172;
+    --dark-pink: #B49594;
+    --light-pink: #C9B1BD;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    font-family: "Nunito", sans-serif;
+    background-color: var(--bg-color);
+}
+.home_container{
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100vw;
+}
+.title{
+    font-size: 140px;
+    color: var(--main-text);
+    text-align: center;
+    font-weight: 900;
+}
+img{
+    image-rendering: pixelated;
+}
+.home_container img{
+    text-align: center;
+    width: 490px;
+}
+.home_container a i, .ui_container a i{
+    text-decoration: none;
+    color: var(--main-text);
+    font-size: 50px;
+    margin-left: 40px;
+    transition: all .8s ease;
+}
+.home_container a i:hover, .ui_container a i:hover{
+    transform: translateY(-10px);
+    /* color: var(--white); */
+}
+
+/* main page */
+.ui_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+.back_desktop{
+    margin-top: 62vh;
+}
+.grass_patch{
+    width: 490px;
+}
+.garden_patch{
+    position: relative;
+}
+
+.flowers{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+.flowers img{
+    /* position: absolute; */
+    width: 80px;
+    /* top: 0; */
+}
+.flowers img:nth-child(1){
+    left: 80px;
+}
+.calendar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calendar p{
+    color: var(--main-text);
+    font-size: 25px;
+    font-weight: 800;
+}
+.calendar i{
+    font-size: 30px;
+    color: var(--main-text);
+    transition: all .5s ease-in-out;
+}
+.days_circles{
+    margin-top: 25px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 12px 12px 12px 12px 12px 12px 12px ;
+}
+.day{
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    background-color: var(--white);
+    padding: 10px;
+}
+.dialog_prompt{
+    display: none;
+    position: absolute;
+    right: 6vw;
+    bottom: 2vh;
+    z-index: 10;
+    width: 160px;
+    background-color: var(--white);
+    width: 360px;
+    padding: 10px 10px ;
+    border-radius: 5px;
+    align-items: center;
+}
+.dialog_ques{
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--main-text);
+    margin-bottom: 10px;
+}
+.emotions_log{
+    display: flex;
+    flex-direction: column;
+}
+.emotions_log p{
+    font-weight: 600;
+    padding-bottom: 10px;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+.emotions_log p:hover{
+    background-color: rgb(235, 235, 235);
+}
+.show{
+    display: block !important;
+}
+.mobile_nav{
+    display: none;
+}
+.mobile_nav a{
+    margin-right: 12vw;
+}
+.mobile_nav a i{
+    text-decoration: none;
+    color: var(--main-text);
+    font-size: 40px;
+    transition: all .8s ease;
+    
+}
+.mobile_nav a i:hover {
+    transform: translateY(-10px);
+}
+
+/* media query */
+@media (max-width: 480px){
+    .title {
+        font-size: 90px;
+        text-align: center;
+        line-height: 0.8;
+        margin: 50px 0;
+    }
+    .home_container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        /* justify-content: center; */
+    }
+    .ui_container{
+        height: 100vh;
+        flex-direction: column;
+        margin-bottom: 0px;
+        align-items:center ;
+    }
+    .home_container img, .garden_patch img {
+        margin-top: 5vh;
+        width: 360px;
+    }
+    .home_container a{
+        /* display: block; */
+        margin-top: 20px;
+    }
+    .home_container a i{
+        margin-left: 10px;
+        font-size: 40px;
+    }
+    .back_desktop{
+        display: none;
+    }
+    .mobile_nav {
+        display: flex;
+        width: 100vw;
+        justify-content: space-between;
+    }
+    .right_side_bar .flower_emotions,.right_side_bar .calendar{
+        display: none;
+    }
+}
+@media (max-width: 386px){
+    .home_container img {
+        width: 300px;
+    }
+    .title {
+        font-size: 70px;
+    }
+}

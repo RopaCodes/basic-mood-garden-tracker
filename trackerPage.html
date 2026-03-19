@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/fb9f288e05.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>mood garden</title>
+  </head>
+  <body>
+    <div class="main_pg_container">
+      <h1 class="title">mood garden</h1>
+      <div class="ui_container">
+        <a href="./index.html" class="back_desktop"><i class="fa-solid fa-caret-left"></i></i></a>
+        <div class="garden_patch">
+          <img src="./assets/grass.PNG" alt="grass patch" class="grass_patch"/>
+          <div class="flowers">
+            <!-- <img src="./assets/LilyOfTheValley.png" alt="">
+            <img src="./assets/LilyOfTheValley.png" alt=""> -->
+          </div>
+        </div>
+        <div class="right_side_bar">
+          <div class="calendar" id="calendarId">
+            <i class="fa-solid fa-caret-left"></i>
+            <p class="month" id="the_month">Month</p>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="flower_emotions" id="flowersId">
+            <div class="days_circles">
+                <div class="day" data-index="0" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="1" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="2" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="3" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="4" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="5" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="6" id="day_id" onclick="clickedCircle()"></div>
+                
+                <div class="day" data-index="7" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="8" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="9" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="10" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="11" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="12" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="13" id="day_id" onclick="clickedCircle()"></div>
+
+                <div class="day" data-index="14" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="15" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="16" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="17" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="18" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="19" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="20" id="day_id" onclick="clickedCircle()"></div>
+
+                <div class="day" data-index="21" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="22" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="23" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="24" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="25" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="26" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="27" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="28" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="29" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="30" id="day_id" onclick="clickedCircle()"></div>
+                <div class="day" data-index="31" id="day_id" onclick="clickedCircle()"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile_nav">
+            <a href="./index.html"><i class="fa-solid fa-caret-left"></i></i></a>
+            <div class="flower_emotions_mobile"></div>
+            <a href="#" id="calendar_btn" onclick="displayCal()"><i class="fa-solid fa-calendar"></i></a>
+        </div>
+      </div>
+      <div class="dialog_prompt" id="pick_dialog">
+        <p class="dialog_ques">How are you feeling today?</p>
+        <div class="emotions_log">
+            <p>Ecstatic</p>
+            <p>Happy</p>
+            <p>Okay</p>
+            <p>Sad</p>
+            <p>Angry</p>
+        </div>
+        
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
